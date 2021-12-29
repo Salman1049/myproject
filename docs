@@ -1,0 +1,25 @@
+1. Installing git on linux:
+
+From your shell, install Git using apt-get:
+
+$ sudo apt-get update
+
+$ sudo apt-get install git
+
+Verify the installation was successful by typing git --version:
+$ git --version
+
+2.Configuring git:
+$git config -.global user.name .your_username.
+
+$git config -.global user.email .your_emailid.
+
+4.USING GIT
+step 1: Go to your github account and create a repository with a name(lets say name of your project). We are creating a repository with the name myproject
+
+step2: Make a folder with the name of your project and change your current directory to that  directory.
+$mkdir myproject
+$cd myproject
+
+Step 3: Now we want to initiate Git for this folder
+$git init
