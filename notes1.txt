@@ -1,0 +1,98 @@
+ls	List the directory (folder) system.
+
+cd pathname	Change directory (folder) in the file system.
+
+cd ..	Move one level up (one folder) in the file system.
+
+cp	Copy a file to another folder.
+
+mv	Move a file to another folder.
+
+mkdir	Creates a new directory (folder).
+
+rmdir	Remove a directory (folder).
+
+clear	Clears the CLI window.
+
+exit	Closes the CLI window.
+
+man command	Shows the manual for a given command.
+
+- uptime -Uptime Command In Linux: It is used to find out how long the system is active (running). This command returns set of values that involve,
+ the current time, and the amount of time system is in running state,
+ number of users currently logged into, and the load time for the past 1, 5 and 15 minutes respectively.
+
+- init 6 - In linux init 6 command basically used for reboot the system. It will restart the sysytem
+
+- sudo apt update - it will  show update packages and new version of packages list held in our system .
+
+- sudo apt upgrade - it will update the listing packages
+
+- sudo apt install default-jdk :- install the latest java development kit
+
+- sudo apt install default-jre :- install the java runtime environment
+
+- apt-cache search application name :-it will list down all related packages with the application
+
+- sudo apt autoremove
+
+-sudo apt-get remove jenkins
+sudo apt-get remove --auto-remove jenkins
+
+1- adduser xyz - to create user
+
+-> HostFiles
+ - hostfile is the file where we can map hostname with ip address
+ -All operating systems with network support have a hosts file to translate hostnames to IP addresses.
+ -Whenever you open a website by typing its hostname, your system will read through the hosts file to check for the corresponding IP and then open it.
+ -hostfile can be edited to override network settings
+ -Basically hostfile is in /etc/hosts
+ -Mapping hostnames to IP-addresses in /etc/hosts can be very useful for testing purposes.
+
+
+-- command - sudo nano /etc/hosts
+
+--> SWAP MEMORY
+
+  
+  -A Swap Memory is a space in the Hard Disk of your computer that Operating Systems will use to put the info,
+  that is actually on the RAM to free it for another application.
+  -Swap memory in Linux is used when the amount of physical memory (RAM) is full.
+  -If the system needs more memory resources and the RAM is full, inactive pages in memory are moved to the swap space.
+  -Swap space is located on hard drives, which have a slower access time than physical memory.
+
+--> SELINUX
+
+ -Security-Enhanced Linux is a security architecture for Linux systems that allows administrators to have more control over who can access the system.
+ -SELinux defines access controls for the applications, processes, and files on a system.
+ - It uses security policies, which are a set of rules that tell SELinux what can or can’t be accessed, to enforce the access allowed by a policy. 
+ -When an application or process, known as a subject, makes a request to access an object, like a file,
+  SELinux checks with an access vector cache (AVC), where permissions are cached for subjects and objects.
+ -If SELinux is unable to make a decision about access based on the cached permissions, it sends the request to the security server.
+ -The security server checks for the security context of the app or process and the file.
+ -Security context is applied from the SELinux policy database.
+ -Permission is then granted or denied. 
+
+ -SELinux can run in one of three modes: disabled, permissive, or enforcing.
+ -Disabled mode:-Disabled mode is strongly discouraged; not only does the system avoid enforcing the SELinux policy,
+ it also avoids labeling any persistent objects such as files, making it difficult to enable SELinux in the future.
+
+ -Permissive mode:-In permissive mode, the system acts as if SELinux is enforcing the loaded security policy, including labeling objects and emitting access denial entries in the logs,
+ but it does not actually deny any operations.While not recommended for production systems, permissive mode can be helpful for SELinux policy development.
+
+ -Enforcing mode:-Enforcing mode is the default, and recommended, mode of operation; in enforcing mode SELinux operates normally, enforcing the loaded security policy on the entire system.
+
+ to check the status
+ -sestatus
+ 
+ command to check selinux 
+ -getenforce
+
+ to change it from enforce to permissive
+ -setenforce 0
+ -getenforce
+
+ to change it from permissive to enforce
+ -setenforce 1
+ -getenforce 
+  
